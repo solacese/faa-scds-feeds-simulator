@@ -1,0 +1,16 @@
+{
+  "apps": [
+    {
+      "name": "faa-feeds",
+      "script": "dist/index.js",
+      "instances": 2,
+      "watch": true,
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}

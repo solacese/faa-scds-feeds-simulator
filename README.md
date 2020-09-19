@@ -1,6 +1,6 @@
 # faa-scds-feeds-simulator
 
-Lightweight Node.js applications that generate and publish dummy FAA SWIM flight position data using MQTT. Currently only the FDPS feed is completed, but we plan to add more SCDS feeds in the future.
+Node.js application that generates dummy FAA SWIM flight position data and publishes it via MQTT. Currently only the FDPS feed is completed, but we may add more SCDS feeds in the future.
 
 ## Running the application
 
@@ -9,12 +9,6 @@ First clone this repo by running...
 ```
 git clone https://github.com/solacese/faa-scds-feeds-simulator.git
 cd faa-scds-feeds-simulator
-```
-
-Then cd into whichever feed you intend to run (currently only FDPS), for example:
-
-```
-cd fdps
 ```
 
 Open the `.EDIT-ME.env` in your selected feed's directory and fill in your MQTT compatible event broker's connection details. If you're like most people and don't have an MQTT broker running in the background, spin up a FREE [Solace Cloud Service](https://console.solace.cloud/login/new-account) in seconds.

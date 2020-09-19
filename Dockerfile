@@ -3,7 +3,7 @@ FROM node:12-alpine
 LABEL maintainer="Andrew Roberts"
 
 # create app directories
-RUN mkdir -p /usr/app/src
+RUN mkdir -p /usr/app/src 
 RUN mkdir -p /usr/app/dist
 
 # copy source code
@@ -25,5 +25,5 @@ RUN chown -R appuser:app /usr/app
 USER appuser
 
 # start the app
-EXPOSE 3000
+EXPOSE 8080
 CMD [ "npm", "run", "start"]

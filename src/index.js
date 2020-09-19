@@ -6,19 +6,14 @@
 // polyfill async
 import "core-js/stable";
 import "regenerator-runtime";
-// load env variables
-import dotenv from "dotenv";
-let result = dotenv.config();
-if (result.error) {
-  throw result.error;
-}
+
 // app modules
 import { createMqttClient } from "./mqtt-client";
-import { createFdpsPositionFeedSource } from "./faa-feeds";
+import { createFdpsPositionFeedSource } from "./fdps";
 
 async function run() {
   let mqttClientConfig = {
-    hostUrl: process.env.SOLACE_MQTT_HOST_URL,
+    hostUrl: process.env.SOLACE_HOST_MQTT,
     options: {
       username: process.env.SOLACE_USERNAME,
       password: process.env.SOLACE_PASSWORD,

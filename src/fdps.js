@@ -53,7 +53,7 @@ function createMockFdpsPositionTick() {
   let randomTrackVelocityY = createRandomIntBetween(100, 600);
 
   return {
-    root: `FDPS`,
+    root: `fdps-position`,
     feed: `position`,
     identifier: `${randomIdentifierPrefix}${randomIdentifierNumber}`,
     fdpsFlightStatus: "ACTIVE",
